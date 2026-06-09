@@ -1,5 +1,11 @@
 allprojects {
     repositories {
+        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        maven { url = uri("https://maven.aliyun.com/repository/central") }
+        maven {
+            isAllowInsecureProtocol = true
+            url = uri("https://maven.aliyun.com/nexus/content/groups/public")
+        }
         google()
         mavenCentral()
     }

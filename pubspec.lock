@@ -81,6 +81,14 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.9"
+  dynamic_color:
+    dependency: "direct main"
+    description:
+      name: dynamic_color
+      sha256: "43a5a6679649a7731ab860334a5812f2067c2d9ce6452cf069c5e0c25336c17c"
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.8.1"
   fake_async:
     dependency: transitive
     description:
@@ -377,6 +385,14 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  settings_ui:
+    dependency: "direct main"
+    description:
+      name: settings_ui
+      sha256: "7437c9c867f331ff6c90e951f2333441eab5cf5e654c3a7f3e4aad0c01db51ef"
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.0.1"
   sky_engine:
     dependency: transitive
     description: flutter
