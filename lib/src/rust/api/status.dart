@@ -6,8 +6,18 @@
 import '../frb_generated.dart';
 import 'package:flutter_rust_bridge/flutter_rust_bridge_for_generated.dart';
 
-String greet({required String name}) =>
-    RustLib.instance.api.crateApiSimpleGreet(name: name);
+/// Update Button Status
+enum UpdateButtStatus {
+  /// Idle, e.g. First time starting the app,
+  /// No Update Available
+  noUpdate,
 
-Future<String> returnHello() =>
-    RustLib.instance.api.crateApiSimpleReturnHello();
+  /// Update Available, but not downloaded yet
+  updateAvailable,
+
+  /// Downloading Update
+  downloading,
+
+  /// Update Downloaded and ready to install
+  readyToInstall,
+}

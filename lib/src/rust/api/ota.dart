@@ -5,6 +5,13 @@
 
 import '../frb_generated.dart';
 import 'package:flutter_rust_bridge/flutter_rust_bridge_for_generated.dart';
+import 'status.dart';
 
 /// Demo functions
 Future<String> getRemoteUrl() => RustLib.instance.api.crateApiOtaGetRemoteUrl();
+
+Future<(UpdateButtStatus, String)> checkUpdate() =>
+    RustLib.instance.api.crateApiOtaCheckUpdate();
+
+Future<String> getLatestReleaseNote() =>
+    RustLib.instance.api.crateApiOtaGetLatestReleaseNote();

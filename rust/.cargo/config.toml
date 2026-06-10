@@ -1,0 +1,14 @@
+[unstable]
+trim-paths = true
+build-std = ["std", "panic_abort"]
+build-std-features = []
+
+[profile.release]
+trim-paths = "object"
+panic = "abort"
+
+[profile.dev]
+trim-paths = "all"
+
+[target]
+rustflags = ["-Zunstable-options", "-Cpanic=immediate-abort"]

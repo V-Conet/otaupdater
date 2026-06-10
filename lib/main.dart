@@ -1,7 +1,6 @@
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
-import 'package:otaupdate/src/rust/api/ota.dart';
-import 'package:otaupdate/src/rust/frb_generated.dart';
+import 'package:otaupdater/src/rust/frb_generated.dart';
 
 import 'pages/home.dart';
 import 'pages/settings.dart';
@@ -21,6 +20,7 @@ class MyApp extends StatelessWidget {
       // 启用MD3动态颜色
       builder: (lightDynamic, darkDynamic) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           theme: ThemeData(
             useMaterial3: true,
             colorScheme:
@@ -38,8 +38,9 @@ class MyApp extends StatelessWidget {
 
           home: const HomePage(),
           // Routers
-          routes: {'/home': (context) => const HomePage(),
-            '/settings': (context) => const SettingsPage()
+          routes: {
+            '/home': (context) => const HomePage(),
+            '/settings': (context) => const SettingsPage(),
           },
         );
       },

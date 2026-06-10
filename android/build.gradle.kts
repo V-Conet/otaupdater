@@ -1,6 +1,6 @@
 allprojects {
     repositories {
-        maven { url = uri("https://maven.aliyun.com/repository/google") }
+        maven { url = uri("https://maven.aliyun.com/repository/_") }
         maven { url = uri("https://maven.aliyun.com/repository/central") }
         maven {
             isAllowInsecureProtocol = true

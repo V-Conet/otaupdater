@@ -1,5 +1,5 @@
 [package]
-name = "rust_lib_otaupdate"
+name = "rust_lib_otaupdater"
 version = "0.1.0"
 edition = "2021"
 
@@ -13,3 +13,11 @@ obfstr = "0.4.4"
 
 [lints.rust]
 unexpected_cfgs = { level = "warn", check-cfg = ['cfg(frb_expand)'] }
+
+[profile.release]
+opt-level = 's'     # Enable all optimizations
+lto = 'fat'         # Enable link-time optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations
+panic = 'abort'     # Abort on panic
+strip = true        # Strip symbols from binary
+debug = false       # Disable debug info

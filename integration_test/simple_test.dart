@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:otaupdate/main.dart';
-import 'package:otaupdate/src/rust/frb_generated.dart';
+import 'package:otaupdater/main.dart';
+import 'package:otaupdater/src/rust/frb_generated.dart';
 import 'package:integration_test/integration_test.dart';
 
 void main() {
