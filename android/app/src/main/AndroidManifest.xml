@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <!-- 基础通知权限 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <application
         android:label="Ota Updater"
         android:name="${applicationName}"
@@ -36,6 +38,13 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <!--Service: Live Notification-->
+        <service
+            android:name="top.vconet.otaupdater.LiveActivitiesService"
+            android:foregroundServiceType="dataSync"
+            android:exported="false" />
+        
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and
